@@ -1,0 +1,205 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+
+{% block title %}
+    <title>About Us - Paaila Technology</title>
+    <meta name="description" content="Know about the vision of Paaila Technology and the team that executes it with brilliance.">
+    <meta name="keywords" content="Vision, Mission, Team, Profile, Information, Objectives, Paaila, Paaila Technology, Technology, Nepal, Automation, Robot">
+{% endblock %}
+
+{% block content %}
+
+    <!-- Hero image -->
+    <div id="vision" class="container-fluid hero-image" style="height:380px;background-image:url({% static 'base/images/Icons_Vision Cover Large.png' %});background-image:no-repeat">
+    </div>
+
+    <div class="container-fluid text-card" style="background:#FAFAFA;margin-bottom: 0;">
+      <div class="container">
+        <div class="col-md-4">
+          <h1>Our vision</h1>
+        </div>
+        <div class="col-md-8">
+            <p>Our vision in three words - <strong>Make in Nepal. </strong><br><br>
+                It aims at producing world class robotics and industrial automation products that are suited for Nepali industries.
+                In doing that we will be promoting a value, a sentiment that if we are prepared to work hard with a focused vision
+                things can be done in Nepal.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero image -->
+    <div id="the-team" class="container-fluid">
+     <img class="img img-responsive" src={% static 'base/images/team.jpg' %}>
+    </div>
+
+    <div class="container-fluid text-card" style="background:#FAFAFA;">
+      <div class="container">
+        <div class="col-md-4">
+          <h1>A note on our culture</h1>
+        </div>
+        <div class="col-md-8">
+          <p>
+              Paaila Technology is a fast paced company with core focus on Robotics and Industrial Automation. It
+              comprises of self motivated, talented and hardworking people who are always learning and always pushing
+              their limits to deliver quality products and services. In a short span of time, it has delivered products
+              and services to some of the biggest names in the country - SBI Nepal Limited, nLocate, Gyani Traders
+              and many more. The trust of that these companies put in us is a testament to the quality and expertise
+              Paaila delivers in its products and to its clients.
+           </p>
+        </div>
+      </div>
+    </div>
+
+    <style>
+    .member{
+{#        height: 300px;#}
+        margin: 0;
+        padding: 0;
+        border-radius: 50%;
+        background-color:red;
+    }
+    </style>
+
+    <div class="team container-fluid">
+        <div class="container">
+
+              <h1 style="margin:3vh 0px 4vh 0;text-align:center" cl>The team that makes Paaila tick</h1>
+
+            <style>
+                .member{
+                    background-color: transparent;
+{#                    border-right: 1px solid #DADADA;#}
+{#                    border-bottom: 1px solid #DADADA;#}
+                    border-radius: 0px;
+                    padding: 15px 0 ;
+                    text-align: center;
+                    height: 290px;
+                }
+
+                .member:hover{
+                    background-color: #666666;
+                    color:white;
+                }
+
+                .member .img{
+                    border-radius: 50%;
+                    width: 150px;
+                    height: auto;
+                    padding: 25px 0;
+                    margin: 0 auto;
+                }
+
+                .member-name{
+                    font-size: 18px;
+                    margin: 0;
+                    padding: 0;
+                    font-family: Dosis;
+                }
+
+                .member-title{
+                    font-size: 14px;
+                    margin: 0;
+                    padding: 0;
+                }
+
+            </style>
+
+            <div class="">
+
+                <div class="col-md-2 member col-xs-6">
+                    <img src="{% static 'base/images/member-biju.jpg' %}" class="img img-responsive" alt="" style="">
+                    <p class="member-name">Biju Raut</p>
+                    <p class="member-title">Chairman</p>
+                </div>
+
+                <div class="col-md-2 member col-xs-6">
+                    <img src="{% static 'base/images/member-binay.jpg' %}" class="img img-responsive" alt="Binay Raut Cofounder of Paaila Technology" style="">
+                    <p class="member-name">Binay Raut</p>
+                    <p class="member-title">Chief Executive Officer</p>
+                </div>
+
+                <div class="col-md-2 member col-xs-6">
+                    <img src="{% static 'base/images/member-dip.jpg' %}" class="img img-responsive" alt="Dipkamal Bhusal - Cofounder of Paaila Technology" >
+                    <p class="member-name">Dipkamal Bhusal</p>
+                    <p class="member-title">Chief Creative Officer</p>
+                </div>
+
+                <div class="col-md-2 member col-xs-6">
+                    <img src="{% static 'base/images/member-niraj.jpg' %}" class="img img-responsive" alt="Niraj Basnet - Cofounder of Paaila Technology" >
+                    <p class="member-name">Niraj Basnet</p>
+                    <p class="member-title">Chief Technology Officer</p>
+                </div>
+
+                <div class="col-md-2 member col-xs-6">
+                    <img src="{% static 'base/images/member-rabin.jpg' %}" class="img img-responsive" alt="Rabin Giri - Cofounder of Paaila Technology" style="">
+                    <p class="member-name">Rabin Giri</p>
+                    <p class="member-title">Chief Finance Officer</p>
+                </div>
+
+                <div class="col-md-2 member col-xs-6">
+                    <img src="{% static 'base/images/member-sagar.jpg' %}" class="img img-responsive" alt="Sagar Shrestha - Cofounder of Paaila Technology" >
+                    <p class="member-name">Sagar Shrestha</p>
+                    <p class="member-title">Chief Operation Officer</p>
+                </div>
+
+                <div class="col-md-2 member col-xs-6">
+                    <img src="{% static 'base/images/member-wasim.jpg' %}" class="img img-responsive" alt="Wasim Akram Khan - Cofounder of Paaila Technology" style="">
+                    <p class="member-name">Wasim Akram Khan</p>
+                    <p class="member-title">Cofounder</p>
+                </div>
+
+                <div class="col-md-2 member col-xs-6">
+                    <img src="{% static 'base/images/member-aayush.jpg' %}" class="img img-responsive" alt="" style="Aayush Kasajoo - Shareholder of Paaila Technology">
+                    <p class="member-name">Aayush Kasajoo</p>
+                    <p class="member-title">Chief Procurement Officer</p>
+                </div>
+
+                <div class="col-md-2 member col-xs-6">
+                    <img src="{% static 'base/images/member-anish.jpg' %}" class="img img-responsive" alt="" style="">
+                    <p class="member-name">Anish Shrestha</p>
+                    <p class="member-title">Electronics Engineer</p>
+                </div>
+
+                <div class="col-md-2 member col-xs-6">
+                    <img src="{% static 'base/images/member-anil-kamat.jpg' %}" class="img img-responsive" alt="" style="">
+                    <p class="member-name">Anil Kamat</p>
+                    <p class="member-title">Mechanical Engineer</p>
+                </div>
+
+                <div class="col-md-2 member col-xs-6">
+                    <img src="{% static 'base/images/member-anil-sapkota.jpg' %}" class="img img-responsive" alt="" style="">
+                    <p class="member-name">Anil Sapkota</p>
+                    <p class="member-title">Mechanical Engineer</p>
+                </div>
+
+                <div class="col-md-2 member col-xs-6">
+                    <img src="{% static 'base/images/member-bibek.jpg' %}" class="img img-responsive" alt="" style="">
+                    <p class="member-name">Bibek Bhandari</p>
+                    <p class="member-title">Operations Manager</p>
+                </div>
+
+                <div class="col-md-2 member col-xs-6">
+                    <img src="{% static 'base/images/member-bishal.jpg' %}" class="img img-responsive" alt="" style="">
+                    <p class="member-name">Bishal Lakha</p>
+                    <p class="member-title">Computer Vision Engineer</p>
+                </div>
+
+                <div class="col-md-2 member col-xs-6">
+                    <img src="{% static 'base/images/member-narayan.jpg' %}" class="img img-responsive" alt="" style="">
+                    <p class="member-name">Narayan Prasad</p>
+                    <p class="member-title">Electronics Engineer</p>
+                </div>
+
+                <div class="col-md-2 member col-xs-6">
+                    <img src="{% static 'base/images/member-trishik.jpg' %}" class="img img-responsive" alt="" style="">
+                    <p class="member-name">Trishik Shrestha</p>
+                    <p class="member-title">Sales & Marketing Officer</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+{% endblock %}

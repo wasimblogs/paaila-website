@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% extends 'base/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <style>
+    .hero-image{
+    background: white center url({% static 'robotics/images/Ad and covers-01.png' %}) no-repeat;
+    }
+
+    @media screen and (max-width: 800px) {
+
+        .hero-image{
+            background: white center url({% static 'robotics/images/Ad and covers_Robot cover small.png' %}) no-repeat;
+        }
+
+        #pari-thumbnail{
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+
+        .hero-image{
+            height: 480px;
+            background: white center url({% static 'robotics/images/Ad and covers_Robot cover very-small.jpg' %}) no-repeat;
+        }
+    }
+
+    </style>
+
+
+<!-- Hero image -->
+<a href="/robotics/"><div class="container-fluid hero-image" style="">
+</div></a>
+
+
+<!--Our Products-->
+<div class="container-fluid" style="
+{#border:1px dashed black;#}
+padding:0;">
+
+    <style>
+      .col-md-4{
+        margin:0;
+{#        border: 1px dashed white;#}
+        padding: 0;
+        height:360px;
+      }
+
+      .col-md-4 .img{
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        overflow: hidden;
+      }
+
+      .col-md-4:hover{
+        /*transform: scale(1.1);*/
+        /*transition: transform 1s ease;*/
+        /*overflow: hidden;*/
+      }
+    </style>
+
+    <a href="/vfd/"><div class="col-md-4 col-sm-12"
+                         style="background: #3398DC center url({% static 'vfd/images/Thumbnails_VFD.jpg' %}) no-repeat;
+            border-bottom: 1px solid #FFF">
+    </div></a>
+
+    <a href="/robotics/"><div class="col-md-4 col-sm-12" id="pari-thumbnail"
+                              style="background: #3398DC center url({% static 'robotics/images/Thumbnails_Pari.jpg' %}) no-repeat;
+                                      border-bottom: 1px solid #FFF ">
+    </div></a>
+
+    <a href="/automaticdhara/"><div class="col-md-4 col-sm-12" style="background: #3398DC center url({% static 'dhara/images/Thumbnails_Dhara.jpg' %}) no-repeat">
+    </div></a>
+
+
+</div>
+<!--  end of our products section-->
+
+
+<!--Our clients seection-->
+<!-- Not responsive -->
+<div class="container client" style="padding:calc(1vw + 1em) 0 calc(1vw + 1em) 0;
+{#border-bottom:1px dashed black;#}
+margin-bottom:0">
+
+  <p style="text-align:center" class="subtitle">Clients</p>
+  <h1 style="margin:1.2vh 0px 4vh 0;text-align:center" class="animated fadeInUp">People/ Companies who love us</h1>
+
+  <div class="" style="margin-top:10px;">
+
+  <div id="testimonial" class=" carousel slide" data-ride="carousel" style="padding:1vh 0 0 0;">
+    <!-- Indicators -->
+{#    <ol class="carousel-indicators" style="background-color:">#}
+{#      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>#}
+{#      <li data-target="#myCarousel" data-slide-to="1"></li>#}
+{#      <li data-target="#myCarousel" data-slide-to="2"></li>#}
+{#    </ol>#}
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+	<style>
+	.item{
+		padding: 20px 40px;
+		padding: 0;
+		background:white;
+{#		max-height: 540px;#}
+		text-align:center;
+        height: auto;
+	}
+
+	.item .caption{
+		margin-bottom: 2vh;
+	}
+
+	.item .detail-caption{
+	}
+
+	.item .quote-by{
+		margin-top: 0.5vh;
+		color: #888;
+	}
+	</style>
+
+      <!--1st item-->
+      <div class="item active" style="background:;">
+        <div class="" style="color:black;padding:20px 2vw; text-align:center">
+            <div class="col-md-3">
+                <img src="{%  static 'base/images/NSBL LOGO.png'%}" alt="logo of Nepal SBI. Paaila Technology built a humanoid robot for Nepal SBI." class="img img-responsive" style="margin: 0 auto">
+            </div>
+
+            <div class="col-md-9" style="">
+                  <p class="caption"><strong>First humanoid Robot in Nepal - Pari</strong></p>
+                  <p class="detail-caption"><blockquote>Designed for SBI Bank Nepal in a time frame of two months with features such as verbal
+                interaction, detection of human presence in proximity, humanoid body structure.
+                Lauched at 25th anniversary July 7, 2017 of Nepal SBI, the Durbar Marg, Kathmandu branch is the first of inTouch branches of SBI to have a humanoid robot greet and assist people in banking.</blockquote></p>
+{#            	<p class="quote-by">Managing Director, Nepal SBI</p>#}
+            </div>
+        </div>
+      </div>
+
+      <!--2nd item-->
+      <div class="item">
+      <div class="item active">
+            <div class="col-md-3">
+                <img src="{%  static 'base/images/nlocate.png'%}" class="img img-responsive" style="margin: 0 auto">
+            </div>
+
+            <div class="col-md-9" style="">
+                  <p class="caption"><strong>Image Processing and Computer Vision</strong></p>
+                  <p class="detail-caption"><blockquote>We collaborated with nLocate to meet their challenging Image Processing and Computer Vision needs.</blockquote></p>
+{#            	<p class="quote-by">Managing Director, Nepal SBI</p>#}
+            </div>
+              </div>
+      </div>
+
+      <!--3rd item-->
+      <div class="item">
+      <div class="item active">
+            <div class="col-md-3">
+                <img src="{%  static 'base/images/sos-logo-small.png'%}" class="img img-responsive" style="margin: 0 auto">
+            </div>
+
+            <div class="col-md-9" style="">
+                  <p class="caption"><strong>Home Automation</strong></p>
+                <p class="detail-caption"><blockquote>The leading manpower venture in the nation SOS Manpower has installed our automated wireless system and has been satisfied with our device.
+            </blockquote></p>
+{#            	<p class="quote-by">Biju Raut, SOS Manpower</p>#}
+            </div>
+              </div>
+      </div>
+
+      <!--4th item-->
+      <div class="item">
+      <div class="item active">
+            <div class="col-md-3">
+                <img src="{%  static 'base/images/Gyani logo.png'%}" class="img img-responsive" style="margin: 0 auto">
+            </div>
+
+            <div class="col-md-9" style="">
+                <p class="caption"><strong>Website Design</strong></p>
+                <p class="detail-caption"><blockquote>Gyani Traders is a grand name among Nepali industries. We augmented its' business presence through a
+                new beautiful and responsive website.</blockquote></p>
+{#            	<p class="quote-by">Aayush Kasajoo, Gyani Traders</p>#}
+            </div>
+              </div>
+      </div>
+
+    <!--3rd item-->
+      <div class="item">
+      <div class="item active" style="background:white;">
+	<div class="col-md-3">
+		<img src="{%  static 'base/images/ns-logo.png'%}" class="img img-responsive" style="margin: 0 auto">
+	</div>
+
+	<div class="col-md-9" style="">
+          <p class="caption"><strong>Website Design</strong></p>
+          <p class="detail-caption"><blockquote>We augmented the presence of a large poultry farm through a beautiful and responsive website.</blockquote></p>
+{#	<p class="quote-by">Sumit Man Simangaida, New Sangam</p>#}
+	</div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#testimonial" data-slide="prev" style="background:none">
+      <span class="fa fa-chevron-circle-left"></span>
+{#      <span class="fa fa-chevron-circle-left"><img src="{% static 'base/images/Arrow-01.png' %}"> </span>#}
+    </a>
+
+    <a class="right carousel-control" href="#testimonial" data-slide="next" style="background:none">
+      <span class="fa fa-chevron-circle-right"></span>
+    </a>
+  </div>
+</div>
+
+</div>
+</div>
+<!--  end of our clients section -->
+
+
+<!-- Awards -->
+<div id="awards" class="container-fluid" style="background: #F0F0F0">
+    <div class="container" style="padding:calc(2vw + 2em) 0 calc(2vw + 2em) 0;
+{#    border-top:1px dashed black;#}
+">
+        <style>
+            .award-img{
+                height:400px;
+                width:auto;
+            }
+
+            .client-text p{
+                padding: 7px 0;
+                font-size: 16px;
+            }
+
+            .award{
+            }
+        </style>
+
+      <p style="text-align:center" class="subtitle">Testimonies for our striving towards excellence</p>
+      <h1 style="margin:1.2vh 0px 6vh 0;text-align:center">Awards</h1>
+
+      <!--Award 1  -->
+          <div class="award col-md-4 col-xs-6" style="margin:0 auto; display: table;">
+            <a href="http://www.myrepublica.com/news/25971/">
+                <img src="{% static 'base/images/ICT Award.jpg' %}" class="award-img img img-responsive" alt="Paaila Technology won - The Best Startup Award - in ICT Award 2017. It was awarded by honorable  Minister for Information and Communications Mohan Bahadur Basnet. 43 startups participated." style="">
+            <div class="client-text">
+              <p style="text-align: left">"Best Startup Award" in ICT Award 2017</p>
+            </div></a>
+          </div>
+
+      <!--Award 2  -->
+          <div class="award col-md-4 col-xs-6" style="margin:0 auto; display: table;">
+            <a href="http://www.myrepublica.com/news/25971/">
+                <img src="{% static 'base/images/ICT Award.jpg' %}" class="award-img img img-responsive" alt="Paaila Technology's product Pari Robot won - The Best Innovative Product- in ICT Award 2017. It was awarded by honorable  Minister for Information and Communications Mohan Bahadur Basnet. 52 startups participated." style="">
+            <div class="client-text">
+              <p style="text-align: left">Best Innovative Award for Pari</p>
+            </div></a>
+        </div>
+
+      <!--Award 3  -->
+          <div class="award col-md-4 col-xs-6" style="margin:0 auto; display: table;">
+            <img src="{% static 'base/images/award-01.jpg' %}" class="award-img img img-responsive" alt="Paaila Technology won the best technology company at technology festival with more the 200 participants." style="">
+            <div class="client-text">
+              <p style="text-align: left">Best Industry Award</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+    <!--  end of awards section-->
+
+
+    <!-- Media Coverage -->
+<div class="container-fluid" style="background: #FFFFFF">
+    <div class="container" style="padding:calc(2vw + 2em) 0 calc(2vw + 2em) 0;
+{#    border-top:1px dashed black;#}
+">
+
+    <style>
+        .media-thumb{
+            opacity: 0.75;
+            width: 180px !important;
+            height: auto;
+        }
+
+        .media-thumb:hover{
+            opacity: 1;
+        }
+    </style>
+
+      <p style="text-align:center" class="subtitle">Paaila in News!</p>
+      <h1 style="margin:1.2vh 0px 4vh 0;text-align:center">Media coverage</h1>
+
+        <div class="row" style="padding: 20px 0">
+          <!--Media 1  -->
+              <div class="col-md-2 col-xs-4" style="margin:0 auto; display: table;">
+                <a href="http://kantipur.ekantipur.com/news/2017-07-12/20170712082145.html">
+                    <img src="{% static 'base/images/kant.jpg' %}" class="img img-responsive media-thumb" alt="" style="">
+                </a>
+              </div>
+
+          <!--Media 2  -->
+              <div class="col-md-2 col-xs-4" style="margin:0 auto; display: table;">
+                  <a href="https://www.youtube.com/watch?v=JEDHbHddut8">
+                    <img src="{% static 'base/images/ap1.png' %}" class="img img-responsive media-thumb" alt="" style="">
+                  </a>
+              </div>
+
+          <!--Media 2  -->
+              <div class="col-md-2 col-xs-4" style="margin:0 auto; display: table;">
+                  <a href="#">
+                    <img src="{% static 'base/images/THT.png' %}" class="img img-responsive media-thumb" alt="" style="">
+                  </a>
+              </div>
+
+          <!--Media 5 -->
+              <div class="col-md-2 col-xs-4" style="margin:0 auto; display: table;">
+                  <a href="https://youtu.be/LYlzuJ9Es34">
+                  <img src="{% static 'base/images/avenues_tv.png' %}" class="img img-responsive media-thumb" alt="" style="">
+                  </a>
+              </div>
+
+              <!--Media 6 -->
+          <div class="col-md-2 col-xs-4" style="margin:0 auto; display: table;">
+            <a href="https://glocalkhabar.com/featured/squad-young-engineers-striving-towards-commercial-future-robotics-nepal-story-paaila-technology/">
+              <img src="{% static 'base/images/glocal.png' %}" class="img img-responsive media-thumb" alt="" style="">
+            </a>
+          </div>
+
+      <!--Media 7 -->
+          <div class="col-md-2 col-xs-4" style="margin:0 auto; display: table;">
+             <a href="http://startupsnepal.com/stories/entry/the-journey-of-paaila-technology-a-kathmandu-based-tech-startup-that-is-taking-the-nepali-automation-scene-by-storm-with-pari">
+              <img src="{% static 'base/images/startups-nepal-index_03.png' %}" class="img img-responsive media-thumb" alt="" style="">
+             </a>
+          </div>
+
+        </div>
+
+{#        <button>More media listing</button>#}
+        <a href="/media" style="padding: 20px 0">
+            <p style="text-align:center;" class="subtitle">More media listing &nbsp; ></p>
+{#        <img src="{% static 'base/images/Arrow_plus.png' %}" style="margin: 0 auto;">#}
+        </a>
+
+{#        <button style="padding: 10px 20px;background: white;border: 2px solid black;border-radius: 2px;>#}
+{#            <a href="/media">More media listing &nbsp;></a>#}
+{#        </button>#}
+
+    </div>
+</div>
+    <!--  end of awards section-->
+
+
+{% endblock%}
+</title>
+</head>
+<body>
+
+</body>
+</html>

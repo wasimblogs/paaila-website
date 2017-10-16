@@ -1,0 +1,45 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+
+    {% block title %}
+        <title>{{ post.title }}- Blog</title>
+    {% endblock %}
+
+
+{% block content %}
+    <link href="{% static 'blog/css/blog.css' %}" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=593f80aa8f08c50011c5db32&product=inline-share-buttons"></script>
+    <div class="" style="margin-top:55px">
+
+{#        <div class="container-fluid" style="height: 400px;background: black;background-image: url({{ post.image.url }}"></div>#}
+        <div class="container post" style="padding: 4vh 0;">
+{#            <div class="row">#}
+            <div class="col-md-8">
+
+                <h1 class="post-title">{{ post.title }}</h1>
+
+                {% if post.published_date %}
+                    <span class="date" style="margin-bottom:40px">
+                        {{ post.published_date }}&nbsp&nbsp&nbsp
+                    </span>
+                    {% if user.is_authenticated %}
+                         <a href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil">&nbsp</span></a>
+                    {% endif %}
+
+                {% endif %}
+
+                    {% autoescape off %}
+                    <p class="post-text">{{ post.text|linebreaksbr }}</p>
+                    {% endautoescape%}
+
+                    <div class="col" style="text-align: center">
+                        <h3>Share the knowledge</h3>
+                        <div class="sharethis-inline-share-buttons"></div>
+                    </div>
+
+            </div>
+{#            </div>#}
+        </div>
+    </div>
+{% endblock %}

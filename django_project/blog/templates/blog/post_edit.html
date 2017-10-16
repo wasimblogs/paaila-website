@@ -1,0 +1,32 @@
+{% extends 'base/base.html' %}
+
+    {% block title %}
+        <title>Edit post - {{ post.title }}</title>
+    {% endblock %}
+
+
+{% block content %}
+    <style>
+    textarea{
+        height: 60vh;
+    }
+    </style>
+    <div class="container" style="margin-top: 80px;">
+        <div class="container"><img src="{{ post.image.url }}" class="img img-responsive"> </div>
+        <form method="POST" class="post-form">
+        {%  csrf_token %}
+{#        {% for field in form %}#}
+{#            {{ field }}#}
+{#        {% endfor %}#}
+
+            <input id="id_title" maxlength="200" name="title" type="text" value="{{ post.title }}" palceholder="Title" required />
+
+            <textarea style="width: 50vw" id="id_text" name="text" rows="10" required>{{ post.text }}
+            </textarea>
+
+            <input id="id_image" name="image" type="file" value=""/>
+
+        <button type="submit" class="save btn btn-default">Save</button>
+        </form>
+    </div>
+{% endblock %}
