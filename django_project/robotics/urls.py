@@ -18,5 +18,9 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index, name="robotics"),
-    url(r'^gallery/', views.gallery, name="gallery"),
+    url(r'pari/', views.pari, name="pari"),
+    url(r'room-service/', views.roomservice, name="roomservice"),
+    url(r'waiter/', views.waiter, name="waiter"),
+    url(r'gallery/', views.gallery, name="gallery"),
 ]
+
