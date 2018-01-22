@@ -22,13 +22,14 @@ app_name = "base"
 urlpatterns = [
 
     # Pages that have no apps
+    url(r'^media/', views.media, name="media"),
+    url(r'^ai', views.ai, name="ai"),
     url(r'^$', views.index, name="index"),
     url(r'^about-us', views.aboutus, name="about-us"),
     url(r'^contact-us', views.send_message, name="contact-us"),
     url(r'^base', views.base, name='base'),
     url(r'^message', views.send_message, name='message'),
-    url(r'^media/$', views.media, name="media"),
-
+    # url(r'^djga/', include('google_analytics.urls')),
     # Resumes
     url(r'^careers/$', views.create_resume, name='resume-add'),
 

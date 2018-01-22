@@ -22,9 +22,14 @@ def aboutus(request):
     form=form_base()
     return render(request, 'base/about-us.html', {'form':form})
 
+def ai(request):
+    form_base=ContactForm
+    form=form_base()
+    return render(request, 'robotics/ai.html', {'form':form})
+
 
 def media(request):
-    return render(request, 'base/media.html')
+    return render(request, 'robotics/media.html')
 
 def careers(request):
     return render(request, 'base/careers.html')
